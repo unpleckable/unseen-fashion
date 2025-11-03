@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UN$EEN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #f4f4f4;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 5vw;
+      border-bottom: 1px solid #222;
+    }
+
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #f4f4f4;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: opacity 0.3s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    .hero {
+      height: 80vh;
+      background: url('https://images.unsplash.com/photo-1607603750909-408e193868dc?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero h2 {
+      position: relative;
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 5px;
+      z-index: 2;
+    }
+
+    .section {
+      padding: 6rem 8vw;
+      text-align: center;
+    }
+
+    .section h3 {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #111;
+      transition: transform 0.4s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: all 0.4s ease;
+    }
+
+    .card:hover img {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    .about {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #aaa;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    footer {
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 3rem 2rem;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 { font-size: 2rem; }
+      nav a { margin-left: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>UN$EEN</h1>
+    <nav>
+      <a href="#drops">Drops</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Not for Everyone</h2>
+  </section>
+
+  <section class="section" id="drops">
+    <h3>Latest Drop</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Drop 1">
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1542060748-10c28b62716e?auto=format&fit=crop&w=800&q=80" alt="Drop 2">
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1600180758890-6d2b7b6d91c5?auto=format&fit=crop&w=800&q=80" alt="Drop 3">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h3>About UN$EEN</h3>
+    <p class="about">
+      UN$EEN is a movement born in the alleys, not the boardrooms.  
+      We design limited-run pieces for those who live offbeat—no logos, no noise, no fake hype.  
+      Just raw design, individuality, and the courage to stay unnoticed.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 UN$EEN. All rights reserved.
+  </footer>
+</body>
+</html>
